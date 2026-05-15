@@ -1,0 +1,23 @@
+OBD-II Diagnostic Trouble Codes
+
+Common Codes:
+- P0300: Random misfire detected
+- P0171: Fuel system too lean
+- P0420: Catalyst system efficiency below threshold
+- P0455: Large EVAP system leak
+
+Symptoms:
+- Check engine light ON
+- Poor fuel economy
+- Rough engine performance
+
+Causes:
+- Faulty sensors
+- Fuel system issues
+- Exhaust system problems
+
+Recommended Actions:
+- Use OBD scanner
+- Identify error code
+- Repair faulty component
+- Reset check engine light after repair

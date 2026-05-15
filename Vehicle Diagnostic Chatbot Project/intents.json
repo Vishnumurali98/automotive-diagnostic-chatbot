@@ -1,0 +1,349 @@
+{
+  "intents": [
+
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning", "good evening"],
+      "responses": [
+        "Hello! How can I help with your vehicle today?",
+        "Hi there! What car issue can I assist you with?",
+        "Welcome! Tell me about your vehicle problem."
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "thanks bye"],
+      "responses": [
+        "Goodbye! Drive safely.",
+        "Take care of your vehicle. See you next time.",
+        "Happy driving! Come back anytime."
+      ]
+    },
+
+    {
+      "tag": "engine_noise",
+      "patterns": [
+        "engine making noise",
+        "strange engine sound",
+        "knocking sound from engine",
+        "engine ticking noise"
+      ],
+      "responses": [
+        "Engine noise may indicate low oil level, worn components, or ignition problems. Please check oil level first.",
+        "Unusual engine sounds should be inspected quickly. It may be internal wear or poor combustion.",
+        "If the noise increases with acceleration, visit a mechanic immediately."
+      ]
+    },
+
+    {
+      "tag": "engine_overheating",
+      "patterns": [
+        "engine overheating",
+        "temperature too high",
+        "car overheating",
+        "engine hot warning"
+      ],
+      "responses": [
+        "Engine overheating is often caused by low coolant or radiator issues. Stop driving and let the engine cool.",
+        "Check coolant level and radiator fan. Do not open radiator cap when hot.",
+        "Overheating can damage the engine. Seek mechanical inspection."
+      ]
+    },
+
+    {
+      "tag": "battery_problem",
+      "patterns": [
+        "battery dead",
+        "car wont start",
+        "battery problem",
+        "weak battery"
+      ],
+      "responses": [
+        "Your battery may be discharged. Try jump starting the vehicle.",
+        "Check battery terminals for corrosion and tight connections.",
+        "If the battery is old, replacement may be required."
+      ]
+    },
+
+    {
+      "tag": "alternator_issue",
+      "patterns": [
+        "battery keeps dying",
+        "alternator problem",
+        "charging system warning",
+        "battery light on"
+      ],
+      "responses": [
+        "A battery warning light often indicates alternator failure.",
+        "If the car loses power while driving, alternator output may be low.",
+        "Have the charging system tested at a service center."
+      ]
+    },
+
+    {
+      "tag": "brake_problem",
+      "patterns": [
+        "brake not working",
+        "brake noise",
+        "squeaking brakes",
+        "brake pedal soft"
+      ],
+      "responses": [
+        "Brake noise often indicates worn brake pads or debris in the braking system. If you hear grinding or experience reduced braking efficiency, it is recommended to inspect the brake pads and discs immediately for safety.",
+        "A soft brake pedal may suggest brake fluid leak or air in system.",
+        "Brake issues affect safety. Immediate inspection is recommended."
+      ]
+    },
+
+    {
+      "tag": "abs_warning",
+      "patterns": [
+        "abs light on",
+        "anti lock brake warning",
+        "abs warning dashboard"
+      ],
+      "responses": [
+        "ABS warning means anti-lock braking system may not function correctly.",
+        "Normal braking may still work, but emergency braking control may be reduced.",
+        "Have the ABS system scanned for fault codes."
+      ]
+    },
+
+    {
+      "tag": "oil_change",
+      "patterns": [
+        "oil change",
+        "when to change oil",
+        "engine oil service",
+        "oil service due"
+      ],
+      "responses": [
+        "Engine oil should usually be changed every 5000 to 10000 km depending on vehicle type.",
+        "Regular oil changes improve engine life and performance.",
+        "Check your vehicle manual for recommended interval."
+      ]
+    },
+
+    {
+      "tag": "low_oil_pressure",
+      "patterns": [
+        "oil pressure warning",
+        "oil light on",
+        "low oil pressure"
+      ],
+      "responses": [
+        "Low oil pressure is serious. Stop the engine immediately.",
+        "Check engine oil level before driving again.",
+        "Driving with low oil pressure can cause engine damage."
+      ]
+    },
+
+    {
+      "tag": "tire_pressure",
+      "patterns": [
+        "tire pressure light",
+        "low tire pressure",
+        "tpms warning"
+      ],
+      "responses": [
+        "Check tire pressure using a pressure gauge.",
+        "Inflate tires to recommended PSI shown on door sticker.",
+        "Driving with low pressure reduces fuel efficiency and safety."
+      ]
+    },
+
+    {
+      "tag": "flat_tire",
+      "patterns": [
+        "flat tire",
+        "puncture",
+        "tire burst"
+      ],
+      "responses": [
+        "Replace the flat tire with spare tire if available.",
+        "Drive slowly to nearest service station.",
+        "Check for visible damage before driving."
+      ]
+    },
+
+    {
+      "tag": "fuel_consumption",
+      "patterns": [
+        "high fuel consumption",
+        "car using too much fuel",
+        "poor mileage"
+      ],
+      "responses": [
+        "Poor fuel economy may be due to dirty air filter or low tire pressure.",
+        "Aggressive driving and traffic also increase fuel usage.",
+        "Engine tuning and maintenance can improve efficiency."
+      ]
+    },
+
+    {
+      "tag": "car_wont_start",
+      "patterns": [
+        "car not starting",
+        "ignition problem",
+        "starter not working"
+      ],
+      "responses": [
+        "Check battery charge first.",
+        "Starter motor or ignition system may be faulty.",
+        "Listen for clicking sound when turning key."
+      ]
+    },
+
+    {
+      "tag": "transmission_problem",
+      "patterns": [
+        "gear not shifting",
+        "transmission slipping",
+        "gearbox problem"
+      ],
+      "responses": [
+        "Transmission slipping may indicate low transmission fluid.",
+        "Hard shifting may require gearbox inspection.",
+        "Avoid driving long distances if transmission is faulty."
+      ]
+    },
+
+    {
+      "tag": "steering_problem",
+      "patterns": [
+        "steering hard",
+        "power steering issue",
+        "steering vibration"
+      ],
+      "responses": [
+        "Hard steering may indicate low power steering fluid.",
+        "Steering vibration may be wheel alignment issue.",
+        "Inspect steering system soon for safety."
+      ]
+    },
+
+    {
+      "tag": "ac_not_working",
+      "patterns": [
+        "ac not cooling",
+        "air conditioner not working",
+        "no cold air"
+      ],
+      "responses": [
+        "AC may need refrigerant refill.",
+        "Compressor or condenser may be faulty.",
+        "Check cabin air filter condition."
+      ]
+    },
+
+    {
+      "tag": "service_booking",
+      "patterns": [
+        "book service",
+        "schedule maintenance",
+        "service appointment"
+      ],
+      "responses": [
+        "I can help you book a service appointment.",
+        "Please provide your preferred date and location.",
+        "Service booking available at nearest dealership."
+      ]
+    },
+
+    {
+      "tag": "dealer_location",
+      "patterns": [
+        "nearest dealer",
+        "service center near me",
+        "car dealership location"
+      ],
+      "responses": [
+        "Please share your location to find nearest dealership.",
+        "I can help locate authorized service centers nearby.",
+        "Dealer locations depend on your region."
+      ]
+    },
+
+    {
+      "tag": "warranty_info",
+      "patterns": [
+        "car warranty",
+        "is my car under warranty",
+        "warranty coverage"
+      ],
+      "responses": [
+        "Warranty depends on mileage and purchase date.",
+        "Check warranty booklet or contact dealer.",
+        "Extended warranty options may be available."
+      ]
+    },
+
+    {
+      "tag": "dashboard_warning",
+      "patterns": [
+        "warning light on",
+        "dashboard light",
+        "check engine light"
+      ],
+      "responses": [
+        "Dashboard warning lights indicate system alerts.",
+        "Check engine light requires diagnostic scan.",
+        "Do not ignore persistent warning lights."
+      ]
+    },
+
+    {
+      "tag": "maintenance_schedule",
+      "patterns": [
+        "maintenance schedule",
+        "service interval",
+        "routine service"
+      ],
+      "responses": [
+        "Routine maintenance includes oil change, filter replacement, and inspections.",
+        "Follow manufacturer recommended schedule.",
+        "Regular servicing prevents major failures."
+      ]
+    },
+
+    {
+      "tag": "insurance_query",
+      "patterns": [
+        "car insurance",
+        "insurance claim",
+        "insurance coverage"
+      ],
+      "responses": [
+        "Please contact your insurance provider for claim processing.",
+        "Keep vehicle documents ready for insurance.",
+        "Dealership may assist with insurance repair."
+      ]
+    },
+
+    {
+      "tag": "thank_you",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "appreciate it"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help.",
+        "Let me know if you need anything else."
+      ]
+    },
+
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "I need more details about the vehicle problem.",
+        "Please describe the issue more clearly.",
+        "Can you explain the symptoms you are noticing?"
+      ]
+    }
+
+  ]
+}

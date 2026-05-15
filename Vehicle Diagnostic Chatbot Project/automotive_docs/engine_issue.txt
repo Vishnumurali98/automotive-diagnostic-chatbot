@@ -1,0 +1,41 @@
+Engine Issues and Diagnostics
+
+Common Engine Problems:
+- Engine knocking
+- Engine overheating
+- Engine misfire
+- Loss of power
+
+Causes of Engine Knocking:
+- Low octane fuel
+- Carbon buildup
+- Incorrect ignition timing
+- Worn connecting rod bearings
+
+Engine Overheating Causes:
+- Low coolant level
+- Faulty radiator
+- Broken cooling fan
+- Thermostat failure
+
+Symptoms:
+- High temperature gauge
+- Steam from engine
+- Burning smell
+- Reduced performance
+
+Low Oil Pressure Symptoms:
+- Oil warning light ON
+- Engine ticking noise
+- Engine overheating
+
+Safety Advice:
+- Stop driving immediately if overheating
+- Do not open radiator cap when hot
+- Check oil and coolant levels
+
+Recommended Actions:
+- Check engine oil level
+- Refill coolant
+- Inspect radiator and hoses
+- Visit mechanic if issue persists

@@ -1,0 +1,29 @@
+Battery and Electrical System Issues
+
+Common Problems:
+- Dead battery
+- Weak battery
+- Alternator failure
+- Loose connections
+
+Symptoms:
+- Car not starting
+- Clicking sound when turning key
+- Dim headlights
+- Battery warning light ON
+
+Possible Causes:
+- Old battery (3-5 years lifespan)
+- Corroded battery terminals
+- Faulty alternator
+- Parasitic drain
+
+Safety Advice:
+- Avoid repeated jump starts
+- Turn off lights when engine is off
+
+Recommended Actions:
+- Check battery voltage
+- Clean battery terminals
+- Replace battery if needed
+- Test alternator output

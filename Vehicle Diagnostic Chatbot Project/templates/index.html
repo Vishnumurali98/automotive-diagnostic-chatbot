@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {# <title>Mental Health Chatbot Project</title>#}
+    <title>Automotive Diagnostics Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {#
+    <style>#}
+{#        h1{#}
+{#            text-align: center;#}
+{#            font-size: 34px;#}
+{#            }#}
+{#        h2 {#}
+{#            text-align: center;#}
+{#            font-size: 26px;#}
+{#            }#}
+{#        body {#}
+{#            font-family: "Times New Roman", Times, serif;#}
+{#            background-color: #fffdd0;#}
+{#            padding: 50px;#}
+{#            }#}
+{#        #chat-box {#}
+{#            outline: 5px solid black;#}
+{#            background-color: #efeee8;#}
+{#            display: flex;#}
+{#            flex-direction: column;#}
+{#            background: white;#}
+{#            padding: 10px;#}
+{#            border-radius: 5px;#}
+{#            height: 300px;#}
+{#            overflow-y: scroll;#}
+{#            margin-bottom: 10px;#}
+{#            }#}
+{#        .user-text {#}
+{#             color: black;#}
+{#             background-color: #d0e7ff;#}
+{#             outline: 2px solid green;#}
+{#             margin: 5px 0;#}
+{#             align-self: flex-end;#}
+{#             border-radius: 5px;#}
+{#             }#}
+{#        .bot-response {#}
+{#            color: black;#}
+{#            background-color: #d8ffd8;#}
+{#            outline: 2px solid blue;#}
+{#            margin: 5px 0;#}
+{#            align-self: flex-start;#}
+{#            border-radius: 5px;#}
+{#            }#}
+{#        #intents-output{#}
+{#            white-space: pre-wrap;#}
+{#            display: none;#}
+{#        }#}
+{#
+    </style>
+    #}
+</head>
+<body>
+<!-- ========================= -->
+<!-- STATIC WEBSITE CONTENT -->
+<!-- ========================= -->
+<div class="background-animation"></div>
+
+<div class="main-content">
+    <h1>Automotive Diagnostics & Technical Support</h1>
+    <p class="subtitle">
+        AI-powered system to diagnose vehicle issues, assist with maintenance,
+        and support service booking using intelligent data-driven insights.
+    </p>
+
+    <!-- FEATURES -->
+    <div class="features">
+
+        <div class="feature-card">
+            <h3>🔧 Smart Diagnosis</h3>
+            <p>Identify vehicle problems using AI-powered analysis and automotive knowledge.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📅 Service Booking</h3>
+            <p>Schedule maintenance services quickly with guided booking support.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📊 Intelligent Insights</h3>
+            <p>Get detailed explanations, causes, safety advice, and next steps.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Floating Chat Button -->
+<div id="chat-toggle" onclick="toggleChat()">🚗</div>
+
+<!-- Glass Chat Widget -->
+<div id="chat-widget">
+
+    <div class="chat-header">
+        <div class="ai-status">
+            <span class="dot"></span>
+            Automotive AI Assistant
+        </div>
+        <div class="close-btn" onclick="toggleChat()">✕</div>
+    </div>
+
+    <div id="chat-messages"></div>
+    <div class="quick-actions">
+        <button onclick="handleQuickAction('diagnose')">🔧 Diagnose</button>
+        <button onclick="handleQuickAction('service')">📅 Service</button>
+        <button onclick="handleQuickAction('help')">🚗 Help</button>
+    </div>
+    <div class="chat-input-area">
+        <input id="user-input"
+               placeholder="Describe your vehicle issue..."
+               onkeypress="handleKey(event)">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+    <p style="font-size:12px; opacity:0.7; padding:5px 10px;">
+        💡 Tip: You can type your issue or use quick options above
+    </p>
+</div>
+
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
