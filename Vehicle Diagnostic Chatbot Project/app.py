@@ -20,7 +20,11 @@ app = Flask(__name__)
 #----------
 # LOAD DATA
 # --------
-with open("intents.json") as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+INTENTS_PATH = os.path.join(BASE_DIR, "intents.json")
+
+with open(INTENTS_PATH, "r", encoding="utf-8") as f:
     knowledge_base = json.load(f)
     intents_data = knowledge_base["intents"]
 
