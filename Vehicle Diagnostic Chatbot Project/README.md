@@ -15,7 +15,7 @@ The chatbot is designed to assist users and technicians in identifying vehicle-r
 
 #  Live Demo
 
-* https://automotive-diagnostic-chatbot.onrender.com
+🔗 Live Demo: https://automotive-diagnostic-chatbot.onrender.com
 
 ---
 
@@ -102,6 +102,47 @@ RAG improves the system by:
 
 ---
 
+#  Run Locally
+
+## Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+```
+
+## Navigate to project folder
+
+```bash
+cd YOUR_REPO
+```
+
+## Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Create .env file
+
+Add your Gemini API key:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+## Run the application
+
+```bash
+python app.py
+```
+
+Open in browser:
+
+```plaintext
+http://127.0.0.1:5000
+```
+
+
 #  Project Structure
 
 ```plaintext
@@ -117,3 +158,24 @@ project/
 │   └── index.html
 │
 ├── static/
+│   ├── style.css
+│   └── chat.js
+│
+├── automotive_docs/
+│
+└── screenshots/
+```
+
+
+#  Future Improvements
+
+- Voice-enabled diagnostics
+- Real-time vehicle sensor integration
+- Advanced vector database support
+- Multi-language support
+- Fine-tuned automotive LLM
+
+
+# 📄 License
+
+This project is developed for academic and educational purposes.
