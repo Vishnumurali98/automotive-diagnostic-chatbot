@@ -1,29 +1,50 @@
 function toggleChat() {
+
     const widget = document.getElementById("chat-widget");
     const body = document.body;
-    if (widget.style.display === "flex") {
-    setTimeout(() => widget.classList.add("chat-visible"), 100);
-        widget.style.display = "none";
-        body.classList.remove("chat-open"); // REMOVE SHIFT
-        setTimeout(() => widget.style.display = "none", 200);
-    } else {
-        widget.style.display = "flex";
-        body.classList.add("chat-open"); // SHIFT CONTENT
 
+    // CHECK CURRENT VISIBILITY
+    const isVisible = window.getComputedStyle(widget).display !== "none";
+
+    // OPEN CHAT
+    if (!isVisible) {
+
+        widget.style.display = "flex";
+
+        setTimeout(() => {
+            widget.classList.add("chat-visible");
+        }, 10);
+
+        body.classList.add("chat-open");
+
+        // Welcome message only once
         const chat = document.getElementById("chat-messages");
 
-        // Show welcome only once
         if (chat.childElementCount === 0) {
+
             addMessage(
-"Hi 👋 I’m your Automotive AI Assistant.\n\n" +
-"You can:\n" +
-"🔧 Click 'Diagnose' to identify a problem\n" +
-"📅 Click 'Service' to book a service\n" +
-"🚗 Click 'Help' to learn how it works\n\n" +
-"Or type your issue below.",
-"bot"
-);
+                "Hi 👋 I’m your Automotive AI Assistant.\n\n" +
+                "You can:\n" +
+                "🔧 Click 'Diagnose' to identify a problem\n" +
+                "📅 Click 'Service' to book a service\n" +
+                "🚗 Click 'Help' to learn how it works\n\n" +
+                "Or type your issue below.",
+                "bot"
+            );
         }
+
+    }
+
+    // CLOSE CHAT
+    else {
+
+        widget.classList.remove("chat-visible");
+
+        body.classList.remove("chat-open");
+
+        setTimeout(() => {
+            widget.style.display = "none";
+        }, 300);
     }
 }
 

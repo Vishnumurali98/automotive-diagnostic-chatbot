@@ -1,10 +1,5 @@
 # 🚗 AI-Powered Automotive Diagnostic Chatbot using RAG and Gemini LLM
 
-#  Live Demo
-
-* https://automotive-diagnostic-chatbot.onrender.com
-
----
 ##  Overview
 
 This project is a hybrid AI-based automotive diagnostic chatbot developed as part of an MSc dissertation project.
@@ -18,6 +13,27 @@ The chatbot is designed to assist users and technicians in identifying vehicle-r
 
 ---
 
+#  Live Demo
+
+* https://automotive-diagnostic-chatbot.onrender.com
+
+---
+
+#  Screenshots
+
+## Homepage
+
+![Homepage](screenshots/home.png)
+
+## Chat Interface
+
+![Chatbot](screenshots/chatbot.png)
+
+## AI Diagnostic Response
+
+![Diagnosis](screenshots/diagnosis.png)
+
+---
 #  Features
 
 * Hybrid architecture (Rule-based + RAG + LLM)
