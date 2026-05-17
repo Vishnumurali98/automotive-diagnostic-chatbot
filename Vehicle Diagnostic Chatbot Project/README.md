@@ -107,13 +107,13 @@ RAG improves the system by:
 ## Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git clone https://github.com/Vishnumurali98/automotive-diagnostic-chatbot.git
 ```
 
 ## Navigate to project folder
 
 ```bash
-cd YOUR_REPO
+cd automotive-diagnostic-chatbot
 ```
 
 ## Install dependencies
