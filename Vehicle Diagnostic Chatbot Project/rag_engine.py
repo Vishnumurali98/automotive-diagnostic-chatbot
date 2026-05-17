@@ -1,35 +1,41 @@
 import os
-import faiss
-import numpy as np
-from sentence_transformers import SentenceTransformer
-
-# Load embedding model
-embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 # Load documents
 def load_documents(folder="automotive_docs"):
     docs = []
+
+    if not os.path.exists(folder):
+        return docs
+
     for filename in os.listdir(folder):
-        with open(os.path.join(folder, filename), "r", encoding="utf-8") as f:
+        filepath = os.path.join(folder, filename)
+
+        with open(filepath, "r", encoding="utf-8") as f:
             content = f.read()
 
-            #  CHUNKING
-            chunks = content.split("\n\n")  # split by paragraphs
+            chunks = content.split("\n\n")
             docs.extend(chunks)
 
     return docs
 
 documents = load_documents()
 
-# Create embeddings
-doc_embeddings = embed_model.encode(documents)
+# TF-IDF vectorization
+vectorizer = TfidfVectorizer()
+doc_vectors = vectorizer.fit_transform(documents)
 
-# Create FAISS index
-dimension = doc_embeddings.shape[1]
-index = faiss.IndexFlatL2(dimension)
-index.add(np.array(doc_embeddings))
-
+# Retrieve relevant context
 def retrieve_context(query, top_k=3):
-    query_embedding = embed_model.encode([query])
-    distances, indices = index.search(np.array(query_embedding), top_k)
-    return [documents[i] for i in indices[0]]
+
+    if not documents:
+        return ["No automotive documents found."]
+
+    query_vector = vectorizer.transform([query])
+
+    similarities = cosine_similarity(query_vector, doc_vectors).flatten()
+
+    top_indices = similarities.argsort()[-top_k:][::-1]
+
+    return [documents[i] for i in top_indices]
