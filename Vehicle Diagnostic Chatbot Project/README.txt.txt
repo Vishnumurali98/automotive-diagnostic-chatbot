@@ -1,1 +1,0 @@
-To run the project, type "python chatbot_api_key.py" into a terminal when in the same directory as the code file. Make sure the templates folder is in the same directory, as the index.html front-end file is taken from there. An The URL 127.0.0.1:5000 is used to access the front-end. Internet connection is required to use the program.

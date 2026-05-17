@@ -8,5 +8,7 @@ __pycache__/
 # IDE files
 .idea/
 
+*.zip
+
 # OS files
 .DS_Store
