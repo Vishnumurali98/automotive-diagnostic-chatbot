@@ -3,23 +3,35 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load documents
-def load_documents(folder="automotive_docs"):
+def load_documents():
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    folder = os.path.join(base_dir, "automotive_docs")
+
     docs = []
 
     if not os.path.exists(folder):
-        return docs
+        print(f"Folder not found: {folder}")
+        return ["Automotive diagnostic knowledge base placeholder"]
 
     for filename in os.listdir(folder):
+
         filepath = os.path.join(folder, filename)
 
-        with open(filepath, "r", encoding="utf-8") as f:
-            content = f.read()
+        if os.path.isfile(filepath):
 
-            chunks = content.split("\n\n")
-            docs.extend(chunks)
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read()
+
+                chunks = content.split("\n\n")
+
+                docs.extend([chunk for chunk in chunks if chunk.strip()])
+
+    if not docs:
+        docs = ["Automotive diagnostic knowledge base placeholder"]
 
     return docs
-
 documents = load_documents()
 
 # TF-IDF vectorization
